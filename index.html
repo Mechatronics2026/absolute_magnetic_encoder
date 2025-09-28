@@ -17,6 +17,32 @@
     width: 100%;
     overflow-y: auto;
   }
+  /* ====== Download button styles ====== */
+.download-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #0c4da2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  transition: transform .12s ease, opacity .12s ease;
+  font-size: 14px;
+}
+.download-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+.download-btn i { font-size: 16px; }
+
+  
   .slide-container {
     width: 1280px;
     min-height: 720px;
@@ -154,12 +180,23 @@
 <!-- Slide 1: Title Slide -->
 <div class="slide-container mx-auto">
   <!-- Network background illustration -->
-  <img alt="Magnetic Encoder Background" class="network-bg" src="1.jpg"/>
+  <img alt="Magnetic Encoder Background" class="network-bg" src="https://page.gensparksite.com/slides_images/2e8ff4fc633935c61b4fa25f930034ff.jpg"/>
   
   <!-- University Logo Placeholder -->
   <div class="university-logo bg-gray-100 flex items-center justify-center">
     <i class="fas fa-university text-5xl text-gray-500"></i>
   </div>
+
+  <!-- زر تنزيل PDF -->
+  <a id="downloadPdfBtn"
+     class="download-btn"
+     href="https://mechatronics2026.github.io/absolute_magnetic_encoder/absolute_magnetic_encoder.pdf"
+     download
+     target="_blank"
+     aria-label="Download PDF">
+    <i class="fas fa-download" aria-hidden="true"></i>
+    Download PDF
+  </a>
 
   <div class="content-wrapper px-16">
     <div class="title-section text-center">
